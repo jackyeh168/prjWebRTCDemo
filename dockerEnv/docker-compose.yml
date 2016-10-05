@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+  data:
+    build: ./data
+    volumes:
+      - ./redis/data:/data/redis
+      - ./mongo/data:/data/db
+      - ../:/data/myapp
+  redis:
+    build: ./redis
+    volumes_from:
+      - data
+  mongo:
+    build: ./mongo
+    ports:
+        - "27025:27017"
+    volumes_from:
+      - data
+  node:
+    build: ./node
+    ports:
+        - "3000:8000"
+        - "8888:8888"
+    volumes_from:
+      - data
