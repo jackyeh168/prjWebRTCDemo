@@ -27,7 +27,7 @@
                           minHeight: 720,
                           maxWidth: 1280,
                           maxHeight: 720,
-                          frameRate: { min: 35, ideal: 50, max: 60 }
+                          //frameRate: { min: 35, ideal: 50, max: 60 }
                         }
                       }
                     },
@@ -59,7 +59,7 @@
     });
 
     window.broadcastApp.factory('binaryjsClient', function(){
-      return new BinaryClient('ws://45.79.106.150:8888');
+      return new BinaryClient(webSocketServer);
     });
 
     window.broadcastApp.factory('fingerprintManager', function(){

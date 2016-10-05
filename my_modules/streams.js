@@ -7,7 +7,7 @@ module.exports = function() {
     assert = require('assert'),
     webRTCCollection;
 
-  var url = 'mongodb://webrtc_user:HappyWebRTC@45.79.106.150:27025/webrtc';
+  var url = require('../config/server.info').mongo;
   // Use connect method to connect to the Server 
   MongoClient.connect(url, function(err, db) {
     assert.equal(null, err);

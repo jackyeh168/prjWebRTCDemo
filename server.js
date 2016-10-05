@@ -14,7 +14,7 @@ const express = require('express'),
     cache_time = 1 * 86400000,
     redis   = require("redis"),
     redisStore = require('connect-redis')(session),
-    client  = redis.createClient();
+    client  = redis.createClient(require('./config/server.info').redis);
 
 // start app
 initApp();
