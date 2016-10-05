@@ -1,7 +1,7 @@
-#./bin/bash
+#!/bin/bash
 
 # start node server
-forever start .
+pm2 start .
 
 # start binaryjs server
-forever start ./my_binaryjs/binaryjsServer.js
+pm2 start ./my_binaryjs/binaryjsServer.js --no-daemon
