@@ -1,3 +1,5 @@
 node_modules/
 my_binaryjs/videos/
 backup/
+dockerEnv/mongo/data
+dockerEnv/redis/data
