@@ -7,6 +7,7 @@ services:
       - ./redis/data:/data/redis
       - ./mongo/data:/data/db
       - ../:/data/myapp
+      - /data/myapp/node_modules
   redis:
     build: ./redis
     volumes_from:
