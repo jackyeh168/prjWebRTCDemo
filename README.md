@@ -2,21 +2,21 @@
 
 ## Getting Started
 1. Modify the websocket server config in public/js/server.info.js
-```javascript
+  ```javascript
 var serverInfo = {
         host: '<Your IP or domain>',
         port: '<Your port>',
     };
-```
+  ```
 
 2. Install docker and docker-compose
 3. Enter the directory and start all docker containers
-```console
+  ```console
 $ cd prjWebRTCDemo/dockerEnv
 $ docker-compose up -d
 $ docker exec -d dockerenv_mongo_1 bash backup.sh
 $ docker exec -d dockerenv_mongo_1 bash config.sh
-```
+  ```
 
 4. Now you can type the URL below to start it  
   http://<IP:PORT or YOUR_DOMAIN>/broadcast => is for broadcasting real-time video streams  
